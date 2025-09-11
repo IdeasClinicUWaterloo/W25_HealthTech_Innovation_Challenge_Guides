@@ -121,7 +121,7 @@ For the test codes provided for each sensor, open a blank Arduino IDE tab to cop
 * [Touch Sensor Part Link](https://wiki.seeedstudio.com/Grove-Touch_Sensor/)
 * #### Libraries
    * No additional libraries needed for these sensors.
-* #### Docuents
+* #### Documents
    * [Button Manual](https://robu.in/wp-content/uploads/2019/09/Grove-Button-User-Manual.pdf)
    * [Touch Sensor Manual](https://robu.in/wp-content/uploads/2019/09/Grove-Touch-Sensor.pdf)
 * #### Hookup
