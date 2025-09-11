@@ -135,7 +135,7 @@ For the test codes provided for each sensor, open a blank Arduino IDE tab to cop
 * [Part Link](https://wiki.seeedstudio.com/Grove-Buzzer/)
 * #### Libraries
    * [Servo](https://docs.arduino.cc/libraries/servo/) - Also available in Ardiuno IDE Library Manger
-* #### Docuents
+* #### Documents
    * [Manual](https://www.mouser.com/datasheet/2/744/Seeed_107020000-1217511.pdf)
 * #### Hookup
    * Using one of the digital ports (D8) on the Base Shield, simply use the provided 4-prong connection wires to directly connect the sensor to the Base Shield, ensuring proper connections are made (GND to GND, VCC to VCC, etc.)
@@ -220,7 +220,7 @@ For the test codes provided for each sensor, open a blank Arduino IDE tab to cop
 * [Part Link](https://wiki.seeedstudio.com/Grove-Servo/)
 * #### Libraries
    * [Servo](https://docs.arduino.cc/libraries/servo/) - Also available in Ardiuno IDE Library Manger
-* #### Docuents
+* #### Documents
    * [Manual](https://www.manualslib.com/manual/1836691/Seeed-Grove-Servo-Series.html)
 * #### Hookup
    * Using one of the digital ports (D5) on the Base Shield, simply use the provided 4-prong connection wires to directly connect the sensor to the Base Shield, ensuring proper connections are made (GND to GND, VCC to VCC, etc.)
@@ -233,7 +233,7 @@ For the test codes provided for each sensor, open a blank Arduino IDE tab to cop
 * [Part Link](https://wiki.seeedstudio.com/Grove-Sound_Sensor/)
 * #### Libraries
    * No additional libraries needed for this sensor.
-* #### Docuents
+* #### Documents
    * [Datasheet](https://www.mouser.com/datasheet/2/744/Seeed_101020015-1217523.pdf?srsltid=AfmBOorwHlJCEQqf9S8z5mSSTPdVx3PrN5UK1Yeg_4D4VB85bLY0FuRT)
 * #### Hookup
    * Using one of the analog ports (A0) on the Base Shield, simply use the provided 4-prong connection wires to directly connect the sensor to the Base Shield, ensuring proper connections are made (GND to GND, VCC to VCC, etc.)
@@ -246,7 +246,7 @@ For the test codes provided for each sensor, open a blank Arduino IDE tab to cop
 * [Part Link](https://www.digikey.ca/en/products/detail/seeed-technology-co-ltd/101020015/5482612?gclsrc=aw.ds&&utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Product_Low%20ROAS%20Categories&utm_term=&productid=5482612&utm_content=&utm_id=go_cmp-20291741422_adg-_ad-__dev-c_ext-_prd-5482612_sig-Cj0KCQiAs5i8BhDmARIsAGE4xHzTSHPixUNWPe_Sz5zNK9TpqalWp9gAVqcVxikBVv6sWPFyKczcFioaAkwVEALw_wcB&gad_source=1&gclid=Cj0KCQiAs5i8BhDmARIsAGE4xHzTSHPixUNWPe_Sz5zNK9TpqalWp9gAVqcVxikBVv6sWPFyKczcFioaAkwVEALw_wcB&gclsrc=aw.ds)
 * #### Libraries
    * [DFRobot_MAX30102 Arduino Library ](https://github.com/DFRobot/DFRobot_MAX30102)
-* #### Docuents
+* #### Documents
    * [Datasheet](https://www.mouser.com/datasheet/2/744/Seeed_101020015-1217523.pdf?srsltid=AfmBOorwHlJCEQqf9S8z5mSSTPdVx3PrN5UK1Yeg_4D4VB85bLY0FuRT)
 * #### Hookup
    * Using one of the analog ports (A0) on the Base Shield, simply use the provided 4-prong connection wires to directly connect the sensor to the Base Shield, ensuring proper connections are made (GND to GND, VCC to VCC, etc.)
