@@ -1,13 +1,13 @@
-# Web Development: Beginnner's Guide
+# Web Development: Beginner's Guide
 
 **Things to note before we start:**
-- Among the ocean of tools available for web development, this guide aims to teach the basic of basics, using a select set of tools:
-    - Front-End: HTML, CSS, and Bootstrap
+- Among the ocean of tools available for web development, this guide aims to teach the very basics, using a select set of tools:
+    - Front-End: HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), and Bootstrap
     - Back-End: The Flask framework
     - Database: SQLite
 - Code examples for a simple web application are provided alongside this guide to support your learning journey. By the end, you should have a basic understanding of how these examples were written and be ready to create your own basic web application.
 
-- Let's get started!
+Let's get started!
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@
 - 2.1: [Examples Webpages](#h2.1)
 - 2.2: [Using Bootstrap](#h2.2)
 - 2.3: [General Tips](#h2.3)
-- 2.4: [Using the developer's tool (DevTool)](#h2.4)
+- 2.4: [Using the Developer's Tool (DevTool)](#h2.4)
 
 ### 3: [Back-End Development Guide](#h3)
 - 3.1: [Setting Up the Flask Application](#h3.1)
@@ -35,7 +35,7 @@
 
 ### 5: [Running it All](#h5)
 
-<h2 id=h1>Web Development Core Component</h2>
+<h2 id=h1>Web Development Core Components</h2>
 
 Web applications rely on three main parts: the Front End, Back End, and Database. Each part plays a unique role and they work together to provide a smooth user experience.
 
@@ -60,7 +60,7 @@ Web applications rely on three main parts: the Front End, Back End, and Database
 
 <h3 id=h1.4>How They Work Together</h3>
 
-here is a logic flow of how these three components interact:
+Here is a logic flow of how these three components interact:
 
 1. **User Interaction at Front End:** A user interacts with a form on the website to create an account.
 2. **Request to the Back End:** The front end sends this information (e.g., username and password) to the back end through an HTTP request.
@@ -72,25 +72,25 @@ here is a logic flow of how these three components interact:
 <h2 id=h2>Front-End Examples</h2>
 
 - Front-end development typically uses a combination of HTML, CSS, and JavaScript.
-- HTML structures the content, CSS styles the appearance, and JavaScript adds interactivity and dynamic behavior to the webpage.
+- HTML structures the content, CSS styles the appearance, and JavaScript adds interactivity and dynamic behaviour to the web page.
 - Frameworks and libraries like React, Vue.js, and Bootstrap are commonly used to streamline development, enhance functionality, and ensure responsive design for various devices.
 
-<h3 id=h2.1> Example Webpages </h3>
+<h3 id=h2.1> Example Web pages </h3>
 
 - In this guide, very basic examples on using HTML, CSS, and Bootstrap will be provided to aide you.
 
-- You should find in the `/Front-End` directory four html files. These are given to you as example webpages developed with incrementally completeness.
+- You should find in the `/Front-End` directory four HTML files. These are given to you as example web pages developed incrementally.
 
-- The [`home.html`](Front-End/home.html) and [`login.html`](Front-End/home.html) are barebone html files with no stylings implemened.
+- The [`home.html`](Front-End/home.html) and [`login.html`](Front-End/home.html) are bare-bones HTML files with no stylings implemented.
 
   - They illustrate the essential structure and minimal content required to create a web page front-end using only HTML elements.
 
 - the [`signup.html`](Front-End/signup.html) uses a [CSS file](static/assets/style_signup.css) to style its contents.
 
-  - This is to demonstrate how CSS enhances the visual presentation by adding styles such as changing the color of a button when hovered over, making the page more visually appealing and interactive
+  - This is to demonstrate how CSS enhances the visual presentation by adding styles such as changing the colour of a button when hovered over, making the page more visually appealing and interactive
 
-- the [`view_patient.html`](Front-End/view_patients.html) uses both a [CSS file](static/assets/style_view_patients.css) autilizes both a CSS file and the **Bootstrap** framework for its design.
-  - This demonstrates how Bootstrap's extensive library of prebuilt components, utilities, and layout options simplifies development, allowing for the creation of visually appealing pages with minimal custom CSS. Additionally, CSS can be used alongside Bootstrap to override default styles and introduce custom designs for a unique look.
+- the [`view_patient.html`](Front-End/view_patients.html) uses both a [CSS file](static/assets/style_view_patients.css) and the **Bootstrap** framework for its design.
+  - This demonstrates how Bootstrap's extensive library of pre-built components, utilities, and layout options simplifies development, allowing for the creation of visually appealing pages with minimal custom CSS. Additionally, CSS can be used alongside Bootstrap to override default styles and introduce custom designs for a unique look.
 
 <h3 id=h2.2>Using Bootstrap</h3>
 
@@ -98,11 +98,11 @@ here is a logic flow of how these three components interact:
 - To give you an idea of how I used the Bootstrap template to make the front-end for the view_patient page, here is my workflow:
 
   1. I decided that I wanted a "logout" button to put into the navigation bar of my web page
-  2. I went to their offical documentation to look for a template for making a button
-  3. I found the page for `button` under `components` in their documentations. This page showcased a variety of buttons with different configurations and styles.
-     ![button](images_for_guide/bootstrap_button.png)
-  4. I chose to use the gray button shown in the image above.
-  5. I added the corresponding HTML code for the gray button into my [`view_patient.html`](Front-End/view_patients.html) file under the navbar, and added the `ms-auto` class to make it appear at the right. (the navbar is built using a Bootstrap template)
+  2. I went to their official documentation to look for a template for making a button
+  3. I found the page for `button` under `components` in their documentation. This page showcased a variety of buttons with different configurations and styles.
+     ![The Bootstrap documentation page. On the left panel is a list where the Components section and Button option are highlighted. On the main panel there is a list of button variants, where the grey Secondary button and its HTML code have been highlighted.](images_for_guide/bootstrap_button.png)
+  4. I chose to use the grey button shown in the image above.
+  5. I added the corresponding HTML code for the grey button into my [`view_patient.html`](Front-End/view_patients.html) file under the navigation bar (or navbar), and added the `ms-auto` class to make it appear at the right (the navbar is built using a Bootstrap template).
 
      ```html
      <!-- Navbar -->
@@ -118,22 +118,22 @@ here is a logic flow of how these three components interact:
      </nav>
      ```
 
-  6. I rendered my webpage to check if it worked, and yes, it did!
-     ![logout_button](images_for_guide/logout_button.png)
+  6. I rendered my web page to check if it worked, and yes, it did!
+     ![A web page with a grey button labelled "Logout" in the top right corner, which is highlighted.](images_for_guide/logout_button.png)
 
 <h3 id=h2.3>General Tips</h3>
 
-**Start with Planning and Wireframing**
+#### Start with Planning and Wireframing
 
-- Before you begin designing, have a clear concept of what the webpag should do, the user needs, and the overall goals.
-- Create low-fidelity sketches or wireframes to outline the structure and layout of your page. I encourage you to ues [Figma](https://www.figma.com) to plannout the pages before you start coding.
+- Before you begin designing, have a clear concept of what the web page should do, the needs of the user, and the overall goals.
+- Create low-fidelity sketches or wireframes to outline the structure and layout of your page. I encourage you to use [Figma](https://www.figma.com) to plan out the pages before you start coding.
 
-**Learn HTML & CSS**
+#### Learn HTML & CSS
 
-- There are tones of resources online for how to use HTML and CSS so my first advice to you is to use google and chatgpt well.
-  - I would recommand the [HTML](https://www.w3schools.com/html/html_intro.asp) and [CSS tutorials](https://www.w3schools.com/css/css_syntax.asp) made by W3Schools if you are looking for a place to start.
+- There are tonnes of resources online for how to use HTML and CSS, so my first advice to you is to use Google or your preferred search engine to seek them out.
+  - I would recommend the [HTML](https://www.w3schools.com/html/html_intro.asp) and [CSS tutorials](https://www.w3schools.com/css/css_syntax.asp) made by W3Schools if you are looking for a place to start.
 
-**Referencing CSS Files in HTML**
+#### Referencing CSS Files in HTML
 
 - Link to external style sheet:
   - It’s best practice to keep your CSS in a separate file for maintainability and scalability. You can link it to your HTML file using the `<link>`tag inside the `<head>` section of your HTML document:
@@ -141,11 +141,11 @@ here is a logic flow of how these three components interact:
     <link rel="stylesheet" href="path/to/styles.css" />
     ```
 - Ordering of CSS files
-  - The order of how you link the CSS files in the HTML file matters bacause the last linked file will take precedence if there are conflicting rules.
+  - The order of how you link the CSS files in the HTML file matters because the last linked file will take precedence if there are conflicting rules.
 
-**Inline CSS Styling in HTML**
+#### Inline CSS Styling in HTML
 
-- Beside making a CSS class, you can apply styles directly within an HTML element using the `style` attribute:
+- Besides making a CSS class, you can apply styles directly within an HTML element using the `style` attribute:
 
   ```html
   <!-- Eample: line 12 in signup.html -->
@@ -156,45 +156,45 @@ here is a logic flow of how these three components interact:
 
 - This is useful for quick styling but should be used carefully since it can make your code harder to maintain.
 
-**Referecing JavaScript Files in HTML**
+#### Referencing JavaScript Files in HTML
 
-- For complex scripts, you would want to keep your JavaScript in a separate file and link it to your HTML using the `<script>` tag.
+- For complex scripts, you should keep your JavaScript in a separate file and link it to your HTML using the `<script>` tag.
   ```html
   <script src="path/to/script.js"></script>
   ```
-- You can also use the `defer` or `async` attributes to improve page load speed. `defer` ensures the script is executed only after the HTML is fully parsed.
+- You can also use the `defer` or `async` attributes to improve page loading speed. `defer` ensures the script is executed only after the HTML is fully parsed.
   ```html
   <script src="path/to/script.js" defer></script>
   ```
 
-<h3 id=h2.4>Using the developer's tool (DevTool)</h3>
+<h3 id=h2.4>Using the Developer's Tool (DevTool)</h3>
 
 - DevTools is available in all modern web browsers. It allows you to inspect, debug, and modify HTML, CSS, and JavaScript in real-time.
-  - I'm using [`Arc`](https://arc.net/) as my browser so I'll demonstrate with it, but the core of the DevTool is the same accross all browsers.
+  - I'm using [`Arc`](https://arc.net/) as my browser so I'll demonstrate with it, but the core of DevTools is the same across all browsers.
 - In most browsers, you can open DevTools by right-clicking on any webpage element and selecting "Inspect" or pressing `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Opt+I` (Mac).
 - We will cover only the most basic functionalities of DevTools here. Feel free to explore further on your own if you’re interested in discovering more!
 
-**Elements Panel**
+#### Elements Panel
 
-- This panel (in red) shows the structure of your HTML document. You can inspect the elements on your web page by hovering your cursor on them (in blue)
-  ![elemement panel](images_for_guide/transparent_navbar.png)
+- The Elements panel (in red) shows the structure of your HTML document. You can inspect the elements (in blue) on your web page by hovering your cursor over them.
+  ![A web page with a transparent navigation bar highlighted at the top. On the right, the DevTools Elements panel is highlighted in red, and the HTML code for the navigation bar is highlighted in blue.](images_for_guide/transparent_navbar.png)
 
 - **Editing HTML**: Double click on any element to edit its HTML directly in the browser:
 
-  ![change button colour](images_for_guide/change_button_colour.png)
+  ![The same web page as the previous image. The Logout button in the top right is blue and highlighted with an orange box. In the Elements panel, the word "Primary" in the button's HTML code is highlighted.](images_for_guide/change_button_colour.png)
 
   - by changing the class name from `btn-secondary` to `btn-primary` here, I changed the button's colour from grey to blue. (These are Bootstrap classes).
 
-- **Editing CSS**: The style panel displays the applied styles for the selected element. You can modify styles, add new ones, or toggle them on and off to see how they affect the page.
-  ![change style](images_for_guide/DevTool_edit_css.png)
+- **Editing CSS**: The Styles panel displays the applied styles for the selected element. You can modify styles, add new ones, or toggle them on and off to see how they affect the page.
+  ![The same web page as the previous images. On the right, in the Styles panel is a checklist of options for the button.](images_for_guide/DevTool_edit_css.png)
 
-**Console Panel**
+#### Console Panel
 
-- The Console lets you interact with JavaScript in real-time. You can type and execute JavaScript code directly here for testing and debugging.
-- The errors, warnings, and console.log() outputs appear here
-  ![console](images_for_guide/console.png)
+- The Console lets you interact with JavaScript in real time. You can type and execute JavaScript code directly here for testing and debugging.
+- The errors, warnings, and console.log() outputs appear here.
+  ![The same web page as the previous images. On the right, the Console panel is highlighted.](images_for_guide/console.png)
 
-**Device Toolbar**
+#### Device Toolbar
 
 - Click the device icon (or press `Ctrl+Shift+M` on Windows/Linux or `Cmd+Opt+M` on Mac) to simulate different screen sizes and test responsiveness.
   ![device_toolbar](images_for_guide/device_toolbar.png)
