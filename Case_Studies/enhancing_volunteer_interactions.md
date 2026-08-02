@@ -4,7 +4,7 @@
 
 ### Background
 
-At :contentReference[oaicite:0]{index=0}, the **H.E.L.P. program** allows volunteers to spend time with elderly patients to help reduce the risk of delirium.
+At Grand River Hospital, the **H.E.L.P. program** allows volunteers to spend time with elderly patients to help reduce the risk of delirium.
 
 Long-term hospitalized senior patients can benefit greatly from social interaction with volunteers. These visits provide:
 
