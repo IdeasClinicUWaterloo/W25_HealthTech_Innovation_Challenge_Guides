@@ -1,23 +1,44 @@
 # Health Resource Chat Bot
 
-This project aims to develop a Mental Health AI chatbot to help keep patients company in the hospital and provide them with mental health resources. 
+## Overview
 
-This guide follows the steps from the "Real Python" tutorial [Building a chatbot with Python](https://realpython.com/build-a-chatbot-python-chatterbot/). 
+The **Health Resource Chat Bot** is a conversational AI application designed to provide companionship and mental health resources for patients in a hospital setting.
 
+This project uses the Python **ChatterBot** library to train a chatbot with conversational data. The chatbot learns from predefined conversations and responds to users based on similar inputs.
 
+This guide explains how to:
 
+- Set up the development environment
+- Install the required dependencies
+- Train the chatbot
+- Format custom training data
+- Reset the chatbot's learned data
+- Run and interact with the chatbot
 
-### Contents
+This guide follows the steps from the **Real Python** tutorial *Building a Chatbot With Python*.
+
+---
+
+## Prerequisites
+
+Before getting started, make sure you have:
+
+- Python 3 installed
+- pip
+- Git (recommended)
+- Visual Studio Code or another code editor
+- A terminal or command prompt
+
+---
+
+## Table of Contents
 
 1. [Chat Bot Structure](#1-chat-bot-structure)
-2. [Creating your Virtual Environment](#2-creating-your-virtual-environment)
-3. [Preparing chatterbot Library](#3-preparing-chatterbot-library)
+2. [Creating Your Virtual Environment](#2-creating-your-virtual-environment)
+3. [Preparing the ChatterBot Library](#3-preparing-the-chatterbot-library)
 4. [Chat Bot Training](#4-chat-bot-training)
-    * [List Trainer](#list-trainer)
-    * [Corpus Trainer](#corpus-trainer)
-    * [Format Training Data](#format-training-data)
-    * [Untraining](#untraining)
-5. [Using The Chat Bot](#5-using-the-chat-bot)
+5. [Using the Chat Bot](#5-using-the-chat-bot)
+6. [Additional Resources](#additional-resources)
 
 # 1. Chat Bot Structure
 
