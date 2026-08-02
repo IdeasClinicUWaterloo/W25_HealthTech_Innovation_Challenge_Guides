@@ -1,14 +1,85 @@
 # Tackling Loneliness and Social Isolation
 
-## Case Study 
+## Case Study
 
-Loneliness is a recognized risk factor for cognitive decline, anxiety, and delirium, particularly in elderly or long-term hospitalized patients. Research shows that socially isolated patients are 1.5 times more likely to develop delirium due to emotional strain, confusion, and disorientation. 
+## Background
 
-Grand River Hospital faces a challenge: How to reduce loneliness in patients when staff and family visits are limited. AI-powered companions—designed to provide conversation, emotional support, and cognitive stimulation—are emerging as a potential solution. These technologies have been proven to alleviate loneliness in some elderly care settings. 
+Loneliness is a recognized risk factor for cognitive decline, anxiety, and delirium, particularly among elderly patients and individuals experiencing long-term hospitalization.
 
-Your task is to investigate the role of loneliness in the onset of delirium while exploring innovative and practical ways to mitigate it. Consider how AI companions or other technologies could help address loneliness and prevent delirium while maintaining ethical and practical considerations. AI companions are known to be very susceptible to bias and misinformation, so a challenge will be to provide training and run tests to ensure such biases do not occur.
+Research suggests that socially isolated patients are **1.5 times more likely to develop delirium** due to factors such as:
 
-This case encourages you to explore solutions like AI companions, ChatBots, and the reliability of online health resources. How will you help Grand River Hospital address loneliness to reduce delirium? 
+- Emotional strain
+- Confusion
+- Disorientation
+
+Social isolation can negatively affect patients' mental well-being and may increase the risk of delirium during hospitalization.
+
+---
+
+## Current Challenge
+
+Grand River Hospital faces the challenge of reducing loneliness among patients when staff availability and family visits are limited.
+
+Technology-based approaches, including **AI-powered companions**, have emerged as potential solutions by providing:
+
+- Conversation
+- Emotional support
+- Cognitive stimulation
+
+These technologies have shown potential in reducing loneliness in some elderly care settings.
+
+However, implementing such solutions requires careful consideration of:
+
+- Accuracy of information provided
+- Potential bias in AI systems
+- Patient safety
+- Ethical concerns
+
+---
+
+## Research Goals
+
+Your task is to investigate:
+
+### Understanding Loneliness and Delirium
+
+Explore:
+
+- How loneliness contributes to the onset of delirium
+- The relationship between social isolation and patient outcomes
+
+### Exploring Potential Solutions
+
+Consider innovative and practical approaches, including:
+
+- AI companions
+- Chatbots
+- Other technologies that support social interaction
+- Reliable online health resources
+
+### Evaluating Safety and Ethics
+
+Consider how solutions can:
+
+- Minimize bias in AI systems
+- Reduce misinformation
+- Maintain patient trust and safety
+- Be used responsibly in healthcare environments
+
+---
+
+## Challenge Goal
+
+How can technology help Grand River Hospital reduce loneliness and social isolation among patients while lowering the risk of delirium?
+
+Develop ideas that balance:
+
+- Patient needs
+- Practical implementation
+- Ethical considerations
+- Reliability of technology
+
+---
 
 ## References
 * [The Effectiveness of Social Robots for Older Adults: A Systematic Review and Meta-Analysis of Randomized Controlled Studies](https://academic.oup.com/gerontologist/article/59/1/e37/5036100)
