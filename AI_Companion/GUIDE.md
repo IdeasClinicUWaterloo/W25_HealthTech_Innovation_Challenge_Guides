@@ -40,50 +40,144 @@ Before getting started, make sure you have:
 5. [Using the Chat Bot](#5-using-the-chat-bot)
 6. [Additional Resources](#additional-resources)
 
-# 1. Chat Bot Structure
+## 1. Chat Bot Structure
 
-```bot.py``` is the main file that launches the chatbot. This script does 3 main things to make the chatbot work:
-1. Training the chatbot.
-2. Reading user input.
-3. Replying to the user with a line from training data.
+The main chatbot program is contained in **`bot.py`**. This script performs three primary tasks:
 
-The chatbot is trained using conversations formatted into 'input' and 'response'. It then uses these cases to base its answers on, so if a similar input is made to that in its training data, it will respond with a similar response.
+1. Trains the chatbot using the available training data.
+2. Reads user input from the terminal.
+3. Generates and returns an appropriate response.
 
-The chatbot runs on a "while loop", prompting a user input, reading the input, and providing a response. If the user input contains one of the pre-defined end conditions (such as 'quit', 'exit', 'goodbye', or 'bye') the loop will end, closing the chatbot. Otherwise, the chatbot will compare the user input to its training data and output the response of the trained input that is most similar to that of the user.
+### How the Chatbot Responds
 
-Please note that this means the chatbot is unable to give a response that it has not seen in the training. If you want your chatbot to have more realistic conversations, it is important to provide more training data for it to use. 
+The chatbot is trained using conversations formatted as **input–response** pairs. During a conversation, it compares the user's input with its training data and selects the response associated with the most similar input.
 
+For example:
 
-# 2. Creating Your Virtual Environment
-Virtual environments are used in software development since they manage packages, dependencies, and versions to avoid conflicts between other package versions. Conflicting package versions can cause these packages to be uninstalled to allow for the others to run properly, causing problems for other coding files later on.
-
-First, create a folder to store all your chatbot files and virtual environment. Open that folder in VS code (or another source code editor) and open your terminal.<br><br>
-Create your virtual environment named "chatbotenv" using:
-```
-PS> python -m venv chatbotenv
-```
-Activate your virtual environment using:
-```
-PS> chatbotenv\Scripts\activate
-```
-You should now see the virtual environment name in brackets in your terminal. 
-
-# 3. Preparing chatterbot Library
-Install the chatterbot library using:
-```
-(chatbotenv) PS> python -m pip install chatterbot==1.0.4 pytz
+```text
+User: Hi
+Bot: Hello there! What can I help you with?
 ```
 
-Since some of the libraries are out of date, some manual changes need to be made in the files. When you first run ```bot.py``` some of these errors will pop up.
+Because the chatbot relies entirely on its training data, it **cannot generate responses for situations it has never learned**. Expanding the training dataset will generally improve the quality and variety of its responses.
 
-Use the following table to edit them by selecting the link in the terminal where the problem is occurring and making the following changes.
+### Conversation Flow
 
-Error Message |File Path| Line #  | Wrong | Right |
---------------|---------|---------| ------|-------|
-```GeneralAttributeError: module 'time' has no attribute 'clock'``` |chatbotenv\Lib\site-packages\sqlalchemy\util\compat.py|264   |```time_func = time.clock``` | ```time_func = time.perf_counter```
-```AttributeError: module 'collections' has no attribute 'Hashable'``` | chatbotenv\Lib\site-packages\yaml\constructor.py | 8,9 |```import collections, datetime, base64, binascii, re, sys, types``` | ```import datetime, base64, binascii, re, sys, types, collections, collections.abc``` <br><br> ```collections.Hashable = collections.abc.Hashable```
+When `bot.py` is executed, the chatbot continuously waits for user input until an exit command is entered.
 
-Once these changes are complete the only error you will get is that your training file does not exist...yet! That is your next step after learning how this chatbot script works.
+The interaction follows this process:
+
+1. Prompt the user for input.
+2. Read the user's message.
+3. Compare the message against the chatbot's training data.
+4. Return the closest matching response.
+5. Repeat until the user exits.
+
+The chatbot will terminate if the user enters one of the predefined exit commands, such as:
+
+- `quit`
+- `exit`
+- `bye`
+- `goodbye`
+
+
+## 2. Creating Your Virtual Environment
+
+A virtual environment isolates your project's dependencies from the rest of your system. This helps prevent version conflicts between packages and ensures that the chatbot uses the correct libraries without affecting other Python projects.
+
+### Step 1: Create a Project Folder
+
+Create a folder to store your chatbot project and virtual environment. Open this folder in **Visual Studio Code** (or another code editor), then open a terminal in that directory.
+
+### Step 2: Create the Virtual Environment
+
+Create a virtual environment named `chatbotenv` by running:
+
+```powershell
+python -m venv chatbotenv
+```
+
+### Step 3: Activate the Virtual Environment
+
+Activate the virtual environment:
+
+**Windows (PowerShell)**
+
+```powershell
+chatbotenv\Scripts\activate
+```
+
+After activation, your terminal prompt should look similar to:
+
+```text
+(chatbotenv) PS C:\YourProject>
+```
+
+> **Note**
+>
+> If you are using Command Prompt, Git Bash, or macOS/Linux, the activation command will be different. Refer to the Python documentation for the appropriate command for your operating system.
+
+## 3. Preparing the ChatterBot Library
+
+Install the required dependencies before running the chatbot:
+
+```powershell
+python -m pip install chatterbot==1.0.4 pytz
+```
+
+> **Warning**
+>
+> This project uses **ChatterBot 1.0.4**, which depends on several deprecated packages. When using newer versions of Python, you may encounter compatibility issues. If you receive one of the errors below, apply the corresponding fix.
+
+### Common Compatibility Fixes
+
+| Error Message | File | Line | Action |
+|---------------|------|------|--------|
+| `GeneralAttributeError: module 'time' has no attribute 'clock'` | `chatbotenv\Lib\site-packages\sqlalchemy\util\compat.py` | 264 | Replace `time.clock` with `time.perf_counter`. |
+| `AttributeError: module 'collections' has no attribute 'Hashable'` | `chatbotenv\Lib\site-packages\yaml\constructor.py` | 8–9 | Update the import statement and add the compatibility line shown below. |
+
+### Replace `time.clock`
+
+Replace:
+
+```python
+time_func = time.clock
+```
+
+with:
+
+```python
+time_func = time.perf_counter
+```
+
+### Replace `collections.Hashable`
+
+Replace:
+
+```python
+import collections, datetime, base64, binascii, re, sys, types
+```
+
+with:
+
+```python
+import datetime
+import base64
+import binascii
+import re
+import sys
+import types
+import collections
+import collections.abc
+
+collections.Hashable = collections.abc.Hashable
+```
+
+> **Note**
+>
+> The `collections.Hashable` alias was moved to `collections.abc` in newer Python versions. This compatibility fix allows ChatterBot to continue working without modifying the rest of the library.
+
+After applying these changes, run the chatbot again. If you receive an error indicating that the training file does not exist, this is expected if you have not yet created your training data. The next section explains how to prepare and train the chatbot.
 
 
 
