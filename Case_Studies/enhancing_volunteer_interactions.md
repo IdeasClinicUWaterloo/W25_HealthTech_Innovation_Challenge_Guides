@@ -2,6 +2,88 @@
 
 ## Case Study
 
-At Grand River Hospital, a program called H.E.L.P. has been set up where volunteers can give company to elderly patients to help reduce the risk of delirium. Long-term hospitalized senior patients benefit greatly from interactions with volunteers. These visits offer much-needed emotional support and can serve as a form of social enrichment for patients, improving their mental well-being. However, hospital staff have identified a recurring issue: the volunteers, whose time is already stretched thin, are unable to truly connect with patients due to the limited time they have and the current reliance on outdated methods for patient information sharing.
-Volunteers are tasked with visiting 5-7 patients during a typical 3-hour shift. Before each visit, they are given a pile of paper with basic information about the patients, such as names, ages, and medical conditions. Unfortunately, these sheets often fail to provide personal insights—like a patient’s preferred name, favorite food, or preferred TV show or even just some things they enjoy talking about—that can help volunteers form meaningful connections quickly. As a result, many volunteers feel unprepared to fully engage with the patients, while patients miss out on more personalized interactions.
-Recognizing the need for a more efficient and meaningful solution, the hospital staff is seeking a technology-driven system that can securely store and provide volunteers with personalized, non-medical information about patients. The system should provide a quick, easy-to-use interface that allows volunteers to access relevant patient information at a glance, minimizing time spent preparing for each visit. The means to update the information should also be straightforward so that nurses or the patients’ family members can easily update it with the patients’ consent. Lastly, the system must maintain the privacy of all medical and personal data. Volunteers should only have access to non-sensitive, visit-related information, and patients should not have access to the volunteer’s system.
+### Background
+
+At :contentReference[oaicite:0]{index=0}, the **H.E.L.P. program** allows volunteers to spend time with elderly patients to help reduce the risk of delirium.
+
+Long-term hospitalized senior patients can benefit greatly from social interaction with volunteers. These visits provide:
+
+- Emotional support
+- Social enrichment
+- Opportunities for meaningful conversations
+- Improved mental well-being
+
+However, hospital staff have identified a challenge: volunteers often have limited time to build meaningful connections with patients because they lack access to personalized patient information.
+
+---
+
+## Current Challenge
+
+Volunteers typically visit **5–7 patients during a 3-hour shift**.
+
+Before each visit, volunteers receive paper-based patient information containing basic details such as:
+
+- Patient name
+- Age
+- Medical condition
+
+While this information provides important background, it does not include personal details that help volunteers quickly connect with patients, such as:
+
+- Preferred name
+- Favorite foods
+- Favorite television shows
+- Hobbies or interests
+- Conversation topics the patient enjoys
+
+As a result:
+
+- Volunteers may feel unprepared before visits.
+- Conversations may be less personalized.
+- Patients may miss opportunities for meaningful social interaction.
+
+---
+
+## Proposed Direction
+
+Hospital staff are seeking a technology-based solution that can help volunteers access personalized, non-medical information about patients in an efficient and secure way.
+
+The system should allow volunteers to quickly view relevant information before or during visits, reducing preparation time and helping create more meaningful interactions.
+
+---
+
+## System Requirements
+
+A potential solution should consider the following requirements:
+
+### Easy Access
+
+The system should:
+
+- Provide a simple and intuitive interface.
+- Allow volunteers to quickly view relevant patient information.
+- Minimize the time required to prepare for each visit.
+
+### Easy Updates
+
+The system should allow authorized individuals, such as:
+
+- Nurses
+- Family members
+- Patients (with appropriate consent)
+
+to easily update non-medical information.
+
+### Privacy and Security
+
+The system must protect patient information by ensuring:
+
+- Volunteers only access non-sensitive, visit-related information.
+- Medical information remains restricted.
+- Personal data is stored securely.
+- Access is controlled through appropriate permissions.
+
+---
+
+## Challenge Goal
+
+Design a solution that improves volunteer–patient interactions by making personalized, non-medical information easier to access while maintaining patient privacy and consent.
