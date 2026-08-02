@@ -1,26 +1,101 @@
 # Monitoring Risk Factors
 
 ## Case Study
-Delirium can present in various ways; some of its symptoms can be normal symptoms of aging, while other symptoms can also overlap with pre-existing conditions. This makes it difficult to pinpoint what is causing a symptom, making it more complicated to treat. Having a detection system for the factors that increase the risk of developing delirium would be an asset to hospitals in the realm of delirium prevention. 
 
-The desired solution would consider the changes in a patient’s physical condition and environment to mitigate the effect these risk factors have on the patient.
+### Background
 
-### Patient Condition
-Some examples of factors that increase the chances of developing hospital-induced delirium are inactivity, irregular sleep patterns, fever, low blood oxygen saturation, dehydration, and serious illnesses.
+Delirium can present in many different ways. Some symptoms may appear as normal signs of aging, while others may overlap with existing medical conditions.
 
-As the ratio of aging patients in hospitals continues to increase and hospitals remain short-staffed, now more than ever there is a need for, around-the-clock, remote patient monitoring systems. To provide accurate and meaningful data to the staff the desired system would have to be able to read and store relevant data values from the patient while identifying important patterns. There are also important ethical implications that must be considered when dealing with sensitive patient data and devices attached to their person. 
+This makes it difficult for healthcare professionals to determine the cause of symptoms and provide timely treatment.
 
-### Environment
-The World Health Organization has published noise-level guidelines for various community locations at different times. These values include those of hospital wardrooms and treatment rooms, along with general noise levels that can cause sleep disturbances and awakenings during the night. Excessive noise in treatment locations can interfere with the treatments and recovery time, while noise-induced sleep disturbances contribute to ineffective rest.
+A system that can monitor factors associated with delirium risk could support hospitals in preventing delirium before it develops.
 
-Lighting is also something that can be controlled to reduce the chances of developing hospital-induced delirium. Studies show that the most effective method of "light treatment" is to increase the duration of bright natural light the patient is exposed to during the day. If natural light is not possible, exposure to "bright light therapy" (BLT) which shows good results.
+The goal is to develop solutions that consider both:
 
-Aging decreases the levels of the hormones in our body that we use to control our circadian rhythm. This imbalance can mess with the body's sleep-wake cycle. Providing an external stimulus such as lighting patterns can often help keep this cycle on track.
+- Changes in a patient's physical condition
+- Environmental factors that may contribute to delirium risk
 
-The hospital needs a way to ensure that its environment is conducive to healing and that there is a minimized risk of developing delirium from hospital conditions. This is where you come in! Think about how your solution will be used, its possible ethical implications, and the practicality of the solution in the problem space environment.
+---
 
-## References
-#### Patient Condition
+# Patient Condition
+
+## Risk Factors
+
+Several patient-related factors can increase the likelihood of hospital-induced delirium, including:
+
+- Physical inactivity
+- Irregular sleep patterns
+- Fever
+- Low blood oxygen saturation
+- Dehydration
+- Serious illness
+
+As the proportion of older patients in hospitals continues to increase and healthcare systems face staffing challenges, there is a growing need for **24/7 remote patient monitoring systems**.
+
+---
+
+## Data Monitoring Requirements
+
+A potential monitoring system should be able to:
+
+- Collect relevant patient data
+- Store important measurements securely
+- Identify meaningful patterns associated with delirium risk
+- Provide useful information to healthcare professionals
+
+When designing such systems, consider:
+
+- Patient privacy
+- Ethical use of sensitive health data
+- Safety of wearable or attached monitoring devices
+
+---
+
+# Environment
+
+Environmental conditions can also influence delirium risk, particularly by affecting sleep quality and recovery.
+
+## Noise Levels
+
+The World Health Organization (WHO) has published noise-level guidelines for different environments and times of day, including hospital wards and treatment rooms.
+
+Excessive noise in healthcare environments may:
+
+- Interrupt patient rest
+- Cause nighttime awakenings
+- Affect recovery and treatment outcomes
+
+---
+
+## Lighting and Circadian Rhythm
+
+Lighting conditions can also be modified to reduce delirium risk.
+
+Research suggests that increasing exposure to bright natural light during the day can support patients' sleep–wake cycles.
+
+When natural light is unavailable, **bright light therapy (BLT)** may provide an alternative approach.
+
+Aging can reduce the body's ability to regulate hormones involved in circadian rhythm control. This disruption can affect normal sleep patterns.
+
+Providing appropriate external cues, such as controlled lighting schedules, may help maintain a healthier sleep–wake cycle.
+
+---
+
+# Challenge Goal
+
+Hospitals need solutions that create environments supportive of healing while reducing delirium risk.
+
+Consider:
+
+- How your solution would be used in a hospital setting
+- How patient data would be collected and protected
+- The ethical implications of monitoring patients
+- The practicality of implementing the solution in real healthcare environments
+
+---
+
+# References
+## Patient Condition
 * [Sleep-Related Movement Disorders ](https://www.sleepfoundation.org/sleep-related-movement-disorders)
 * [Temperature Variability during Delirium in ICU Patients: An Observational Study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3806845/)
 * [Low brain tissue oxygenation contributes to the development of delirium in critically ill patients: A prospective observational study](https://pubmed.ncbi.nlm.nih.gov/28668768/)
@@ -29,7 +104,7 @@ The hospital needs a way to ensure that its environment is conducive to healing 
 * [Adult Delirium](https://www.ncbi.nlm.nih.gov/books/NBK555956/)
 * [Sleep classification from wrist-worn accelerometer data](https://www.nature.com/articles/s41598-020-79217-x)
 
-#### Environment
+## Environment
 * [Effects of Exercise Intervention for the Management of Delirium in Hospitalized Older Adults: A Randomized Clinical Trial](https://pubmed.ncbi.nlm.nih.gov/38593983/#:~:text=Exercise%20seemed%20to%20reduce%20delirium,did%20not%20reach%20statistical%20significance.)
 * [The role of physical exercise and rehabilitation in delirium](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7224129/)
 * [Physical activity tips for older adults (65 years and older)](https://www.canada.ca/en/public-health/services/publications/healthy-living/physical-activity-tips-older-adults-65-years-older.html)
