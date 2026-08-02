@@ -181,7 +181,7 @@ After applying these changes, run the chatbot again. If you receive an error ind
 
 
 
-# 4. Chat Bot Training
+## 4. Chat Bot Training
 This chatbot is a Natural Language Processing (NLP) chatbot. This type of chatbot needs to be provided with data to train off of if you want it to reply with useful responses. 
 
 Each time ```bot.py``` is run, the training procedures are re-done.
@@ -266,7 +266,7 @@ Check out the provided example by running [format_training_data.py](Chatbot_code
 Everything that the chatbot learns is stored in its memory even after the program ends. If you are running the training programs and realize you trained the bot with something you do not want it to know/talk to users about, you can run the [```untrain.py```](Chatbot_code/untrain.py) file to reset its memory.
 
 
-# 5. Using The Chat Bot
+## 5. Using The Chat Bot
 1. Run ```bot.py``` to initiate chat bot.
 2. Allow training data to download completely.
 3. Once the input prompt ">" appears you can type your question/into the terminal and hit "Enter" to send your input to the chatbot.
