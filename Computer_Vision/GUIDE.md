@@ -11,8 +11,7 @@
  - 3.2: [OpenCV Basic Implementations](#3.2)
 ### 4: [MediaPipe -- Pose Detection Demonstrations](#4)
  - 4.1: [Pose Detection Library Features](#4.1)
-
-
+ - 4.2: [Library Basic Implementations](#4.2)
 
 <h2 id='1'>1: Introduction</h2>
 
@@ -42,7 +41,6 @@ Welcome to the beginner's guide to Computer Vision and Mediapipe! This guide wil
 
 <h3 id='2.3'>2.3: Install Python Libraries</h3>
 
-
 -   **OpenCV**: For handling image and video processing.
 -   **MediaPipe Solutions**: For real-time computer vision tasks such as pose estimation, hand tracking, and face detection. 
 -   **Numpy**: For matrix and array operations.
@@ -51,6 +49,7 @@ You can download the above 3 Python libraries in your virtual environment by ent
     ```
     pip install opencv-python mediapipe numpy
     ```
+
 <h2 id='3'>3: OpenCV Tutorials</h2>
 
 <h3 id='3.1'>3.1: Basic OpenCV Features</h3>
@@ -59,10 +58,12 @@ Here are some important concepts and features of OpenCV that beginners should kn
 
 **Image Channels**
 - **Grayscale images** have 1 channel that represents the intensity level
-    - <img src='images/gray_scale.png' height=200>
+    - <img src='images/gray_scale.png' height=200 alt="Grayscale gradient bar showing pixel intensity values from black on the left to white on the right, illustrating that a single grayscale channel encodes brightness only.">
+    - *Figure: A grayscale intensity gradient. Darker pixels correspond to lower numeric values; lighter pixels correspond to higher values.*
     - the smaller the number is, the darker the pixel
 - **Colour images** have 3 channels (Red, Green, Blue)
-    - <img src='images/rgb_wheel.png' width=450>
+    - <img src='images/rgb_wheel.png' width=450 alt="Color wheel diagram showing how red, green, and blue channels combine to produce the full range of visible colors, with overlapping circles illustrating secondary colors like cyan, magenta, and yellow.">
+    - *Figure: An RGB color wheel showing how the three color channels overlap and combine to form other colors.*
 
 **BGR vs RGB Color Format**
 - OpenCV processes images in **BGR** format, not the typical **RGB** format used in other image processing libraries. The difference is in the order of the color channels
@@ -71,6 +72,7 @@ Here are some important concepts and features of OpenCV that beginners should kn
     # Convert BGR image to RGB
     rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     ```
+
 **Working with Arrays**
 - OpenCV images are stored as **NumPy arrays**. This means you can use NumPy's powerful indexing and slicing features to manipulate image data directly:
     ```
@@ -80,8 +82,8 @@ Here are some important concepts and features of OpenCV that beginners should kn
     # Modify the pixel value (in BGR format)
     image[50, 100] = [255, 0, 0]  # Set to blue
     ```
-<h3 id='3.2'>3.2: OpenCV Basic Implementations</h3>
 
+<h3 id='3.2'>3.2: OpenCV Basic Implementations</h3>
 
 **[Reading and Displaying an Image](cv_examples/read_show_image.py)** (These titles are clickable)
 
@@ -99,7 +101,7 @@ Here are some important concepts and features of OpenCV that beginners should kn
  - Use the [```cv2.VideoCapture()```](https://www.geeksforgeeks.org/python-opencv-capture-video-from-camera/) method with parameter 0 to open the built-in webcam of your laptop
  - Call the ```read()``` method on the VideoCapture object in a loop to process it frame by frame
 
- **[Read Video from File](cv_examples/read_video_from_file.py)**
+**[Read Video from File](cv_examples/read_video_from_file.py)**
  - Same as the above, but replace the parameter in the ```VideoCapture()``` method with the path to the file.
 
 **[Edge Detection](cv_examples/detect_edge.py)**
@@ -119,7 +121,8 @@ Here are some important concepts and features of OpenCV that beginners should kn
  <h3 id='4.1'>4.1: Library Features</h3>
 
  - The Mediapipe Pose Detection library tracks the location of 33 body landmarks.
-    - <img src='https://ai.google.dev/static/mediapipe/images/solutions/pose_landmarks_index.png' height=500px>
+    - <img src='https://ai.google.dev/static/mediapipe/images/solutions/pose_landmarks_index.png' height=500px alt="Diagram of the human body with 33 numbered landmark points overlaid at major joints and features, including the nose, eyes, ears, shoulders, elbows, wrists, hips, knees, ankles, and feet, showing the full skeleton that MediaPipe Pose tracks.">
+    - *Figure: MediaPipe's 33 pose landmarks, numbered and positioned at key body joints (e.g., shoulders, elbows, wrists, hips, knees, ankles) that the model detects and tracks.*
 
  - Each landmark contains the x, y, and z coordinates, as well as the visibility of the landmark
     ```bash
@@ -140,7 +143,10 @@ Here are some important concepts and features of OpenCV that beginners should kn
             - 0.0 == low confidence
     - Let's say the program can only view the upper body of a person to detect their pose, like this:
 
-        <img src='images/upper_body_pose.png' height=200px>\
+        <img src='images/upper_body_pose.png' height=200px alt="Photo of a person visible only from the waist up, with MediaPipe pose landmarks and connecting lines drawn over their head, shoulders, elbows, and wrists; the lower body is out of frame.">
+        
+        *Figure: An upper-body-only view. The lower body is out of the camera frame, but the pose model still returns coordinates for the hip, knee, and ankle landmarks — just with lower confidence.*
+
     the pose detection method will still, by default, return the ```x y z``` coordinates of the lower body landmarks.
         - The visible upper body landmarks will have very **high** ```visibility``` values
         - the knee joints and ankle joint will have extremely **low** ```visibility``` values.
@@ -159,6 +165,6 @@ Here are some important concepts and features of OpenCV that beginners should kn
  - Now that you know how to process one image, processing a video or livestream is easy since a video is just numerous frames of an image. 
  - Check out this code on how that is done, then, you are ready to start your own journey of using CV and Mediapipe to complete your own project!
 
- --- 
+---
 
- Good Luck! 
+Good Luck!
