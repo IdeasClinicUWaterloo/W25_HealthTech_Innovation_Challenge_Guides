@@ -197,22 +197,22 @@ Here is a logic flow of how these three components interact:
 #### Device Toolbar
 
 - Click the device icon (or press `Ctrl+Shift+M` on Windows/Linux or `Cmd+Opt+M` on Mac) to simulate different screen sizes and test responsiveness.
-  ![device_toolbar](images_for_guide/device_toolbar.png)
+  ![The same web page as the previous images. On the top of the screen, the Device icon is highlighted, and there is a bar, with a dropdown list of dimension options. The "responsive" option has been selected and highlighted. In the middle of the screen, there are lines the user can drag to change the page's dimensions manually.](images_for_guide/device_toolbar.png)
 
 <h2 id=h3>Back-End Development Guide</h2>
 
-- Now that you have learnt about the front end, this part of the guide will walk you through the back-end structure.
-- There are many frameworks for back-end, such as Node.js with Javascript, Flask and Django with Python, Ruby on Rails with Ruby, etc.
+Now that you have learned about the front end, this part of the guide will walk you through the back-end structure.
+There are many frameworks for back-end, such as Node.js with Javascript, Flask and Django with Python, Ruby on Rails with Ruby, etc.
 
-- For this guide, we will walk through Python's **Flask** framework by focusing on the key Python files:
+For this guide, we will walk through Python's **Flask** framework by focusing on the key Python files:
 
-  - [`app.py`](Full-Stack/app.py): setting up the flask application with some boilerplate code
-  - [`run.py`](Full-Stack/run.py): a helper file to run the application for the first time
-  - [`main.py`](Full-Stack/main.py): where the real magic (front-end routing, communicating with the database) happens. We will focus on this file the most. 
+- [`app.py`](Full-Stack/app.py): setting up the flask application with some boilerplate code
+- [`run.py`](Full-Stack/run.py): a helper file to run the application for the first time
+- [`main.py`](Full-Stack/main.py): where the real magic (front-end routing, communicating with the database) happens. We will focus on this file the most. 
 
-- Flask provides a way to build a small web application quickly with one Python file. However, a small application can grow into a large application with multiple database tables, hundreds of routes, and complex features. Writing the code for a large application in one file will quickly become messy and hard to manage. Flask allows you to [organize your application’s code base](https://www.digitalocean.com/community/tutorials/how-to-structure-a-large-flask-application-with-flask-blueprints-and-flask-sqlalchemy) by splitting each of the application’s major parts into specific directories and files for a better-organized application.
+Flask provides a way to build a small web application quickly with one Python file. However, a small application can grow into a large application with multiple database tables, hundreds of routes, and complex features. Writing the code for a large application in one file will quickly become messy and hard to manage. Flask allows you to [organize your application’s code base](https://www.digitalocean.com/community/tutorials/how-to-structure-a-large-flask-application-with-flask-blueprints-and-flask-sqlalchemy) by splitting each of the application’s major parts into specific directories and files for a better-organized application.
 
-- We will also explain the login and signup functionalities, how to update HTML templates to reference Python functions, and the steps to run the application.
+We will also explain the login and sign up functionalities, how to update HTML templates to reference Python functions, and the steps to run the application.
 
 <h3 id=h3.1>Setting Up the Flask Application</h3>
 
@@ -239,7 +239,7 @@ app.config['DEBUG'] = True
 ```
 
 **Initializing extensions**:
-Extensions are flask extensions used for different functionalities. Here, we use login_manager to help facilitate easy login and user management.
+Extensions are Flask extensions used for different functionalities. Here, we use login_manager to help facilitate easy login and user management.
 
 ```python
 db.init_app(app)
@@ -269,26 +269,26 @@ app.register_blueprint(main_blueprint)
 
 <h3 id=h3.2>Main Routes and Views</h3>
 
-**What is Routing**
+#### What is Routing?
 
-- Routing determining how an application responds to a client request at the front-end. 
+- Routing determines how an application responds to a client request at the front-end. 
 - In a web framework like Flask, routing connects **URLs** to **functions in the application**, allowing different web pages or API responses to be generated based on the route specified. 
-- For example, when you click the **signup** button, you would expect that your browser will jump to a **signup** page; when you enter your login information in the textbox of the signup page, you would expect that thoese information are "seen" and "remembered" by the server. These expectations are handled by the backend:
-    ![front-back-databse](https://i.ytimg.com/vi/YGxrvHGCJ2Y/maxresdefault.jpg)
+- For example, when you click the **sign up** button, you would expect that your browser will jump to a **sign up** page; when you enter your login information in the textbox of the sign up page, you would expect that that information will be "seen" and "remembered" by the server. These expectations are handled by the back end:
+    ![A diagram titled "Data Flow in Software". A long description follows. The diagram consists of three parts that interact with each other. The first part is labelled "User - Frontend". Below it is a list of front-end languages: HTML and CSS. The second part is labelled "Web Server - Backend". Below it is a list labelled "Business Logic - Coding - Files" containing the following items: PHP, C+, Python, Java, and SQL Query. The third part is labelled "Database - Backend". Below it is a list labelled "Databases", containing the following items: MySQI, MongoDB, and Oracle. Interaction between the parts is shown as follows: Between the User and the Web Server, a User sends a request to the Web Server and gets a response. Between the Web Server and the Database, a process labelled Insert, Update, Fetch, and Delete goes in both directions. End of long description.](https://i.ytimg.com/vi/YGxrvHGCJ2Y/maxresdefault.jpg)
 
     - For example in this code:
         ```html
         <p>No account? <button type="submit" onclick="window.location.href='{{ url_for('main.signup') }}'">Signup</button></p>
         ```
 
-    - "Clicking the `**signup**` button" is a form of user request. Browser "jumping to an other url" is the backend's response to the request.
+    - "Clicking the `**sign up**` button" is a form of user request. The browser "jumping to another URL" is the back end's response to the request.
 
 [`main.py`](Full-Stack/main.py)
 
-In a social media application, you might have the routes for users in a file called routes.py inside a directory called users, and you might then collect the database models for users inside a module called users.py inside a models directory. Then you can do the same for posts, followers, hashtags, questions, answers, ads, the marketplace, payments, and other features in your large social media application. If you want to edit some business logic into the payments code, you can change the database code for payments in a file located at `mysocialapp/models/payment.py`, then change the business logic in a file located at `mysocialapp/payments/routes.py`
-Here for simplicity we just have one `main.py` file.
+In a social media application, you might have the routes for users in a file called routes.py inside a directory called "users", and you might then collect the database models for users inside a module called users.py inside a models directory. Then you can do the same for posts, followers, hashtags, questions, answers, ads, the marketplace, payments, and other features in your large social media application. If you want to edit some business logic into the payments code, you can change the database code for payments in a file located at `mysocialapp/models/payment.py`, then change the business logic in a file located at `mysocialapp/payments/routes.py`
+Here, for simplicity, we just have one `main.py` file.
 
-In our routes when we call `/route` we are refering to our `website/route` page on our url. These are called **routes**.
+In our routes, when we say `/route` we are referring to our `website/route` page in our URL. These are called **routes**.
 
 - **Purpose**: Contains the primary routes for the application.
 
@@ -306,7 +306,7 @@ def index():
 
 **Login Routes**:
 
-- **GET** `/login`: Renders the login page (login.html). **GET** is simply an http request that means to retreive some data. In this case we are retreiving the `login.html` page
+- **GET** `/login`: Renders the login page (login.html). **GET** is simply an http request that means to retrieve some data. In this case we are retrieving the `login.html` page.
 
 ```python
 @main.route('/login')
@@ -318,14 +318,14 @@ def login():
 - **POST** `/login`: Processes login form submission.
 
 
-  - In the `login.html` file we can see that the login form is a 'POST' request. This is how the front-end of the login page signals to the backend that it wants to send some data. The data it is sending here are login details which the backend will then validate if it is correct.
+  - In the `login.html` file we can see that the login form is a 'POST' request. This is how the front end of the login page signals to the back end that it wants to send some data. The data it is sending here are login details which the back end will then validate if it is correct.
 
     `login.html`
     ```html
     <form action="/login" method="post">
     ```
 
-Here we can see in our backend we are going to the login route and listening to a POST request.
+Here we can see in our back end we are going to the login route and listening to a POST request.
 
 ```python
 @main.route('/login', methods=['POST'])
@@ -333,9 +333,9 @@ def login_post():
     # Handle login logic
 ```
 
-**Signup Routes**:
+**Sign up Routes**:
 
-- **GET** `/signup`: Renders the signup page (signup.html).
+- **GET** `/signup`: Renders the sign up page (signup.html).
 
 
 ```python
@@ -346,12 +346,12 @@ def signup():
 
 
 - **POST** 
-    - `/signup`: Processes signup form submission.
-    - Similar to our login post. The signup post html is also a `POST` form which means it wants to add data to the `/signup` backend route.
+    - `/signup`: Processes sign up form submission.
+    - Similar to our login post. The sign up post HTML is also a `POST` form which means it wants to add data to the `/signup` backend route.
        ```html
        <form method="POST" action="/signup">
         ```  
-    - Our sign-up backend is listening for that post request which is just a form with the signup details and will perform some action accordingly. Which in this case is creating a new user in the database (to be covered later).
+    - Our sign-up back end is listening for that post request which is just a form with the sign up details and will perform some action accordingly, which in this case is creating a new user in the database (to be covered later).
 
 
 ```python
@@ -402,24 +402,24 @@ def view_patients():
   4. **Redirection**:
      - Redirect to the index page upon successful login.
 
-**_Signup Process_**
+**_Sign up Process_**
 
 - **File**: `main.py`
 - **Function**: `signup_post()`
-- **Purpose**: Handles signup form submission.
+- **Purpose**: Handles sign up form submission.
 - **Process**:
   1. **Retrieve Form Data**:
      - Name, email, and password.
   2. **User Existence Check**:
      - Query the database to check if the email already exists.
-     - If it exists, flash a message and redirect to signup page.
+     - If it exists, flash a message and redirect to sign up page.
   3. **User Creation**:
      - If the email is new, create a User instance.
      - Hash the password using `generate_password_hash`
      - Add the new user to the database session.
      - Commit the session to save the user.
   4. **Redirection**:
-     - Redirect to the login page upon successful signup.
+     - Redirect to the login page upon successful sign up.
 
 <h3 id=h3.4>Updating HTML Templates</h3>
 
@@ -434,7 +434,7 @@ Referencing Python Functions in `home.html`
 
   2. Update href Attributes:
 
-     - Replace hardcoded URLs with `url_for` references
+     - Replace hard-coded URLs with `url_for` references
 
   3. Examples:
 
@@ -473,7 +473,7 @@ Referencing Python Functions in `home.html`
 
 [`run.py`](Full-Stack/run.py)
 
-Add this code snippet to create the database based on your models after create app:
+Add this code snippet to create the database based on your models after creating the app:
 
 ```python
 with app.app_context():
@@ -483,9 +483,9 @@ with app.app_context():
 <h2 id=h5>Running the Application</h2>
 
 **Setting the `FLASK_APP` Environment Variable.**
-(_Note replace app.py with your path to app.py_)
+(_Note: replace app.py with your path to app.py_)
 
-Flask will automatically detect the create_app() factory function in your app package and use it to create an application instance. But you’ll need to set the environment variables required to run your Flask application in development mode first.
+Flask will automatically detect the create_app() factory function in your app package and use it to create an application instance, but you’ll need to set the environment variables required to run your Flask application in development mode first.
 
 - **For macOS and Linux:**
 
